@@ -1,21 +1,18 @@
 package edu.mum.fpp.entity;
 
 class Account {
-	public final static String CHECKING = "checking";
-	public final static String SAVINGS = "savings";
-	public final static String RETIREMENT = "retirement";
 	private final static double DEFAULT_BALANCE = 0.0;
 	private double balance;
-	private String acctType;
+	private AccountType acctType;
 	private Employee employee;
 
-	Account(Employee emp, String acctType, double balance) {
+	Account(Employee emp, AccountType acctType, double balance) {
 		employee = emp;
 		this.acctType = acctType;
 		this.balance = balance;
 	}
 
-	Account(Employee emp, String acctType) {
+	Account(Employee emp, AccountType acctType) {
 		this(emp, acctType, DEFAULT_BALANCE);
 	}
 
