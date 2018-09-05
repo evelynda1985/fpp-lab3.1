@@ -20,12 +20,17 @@ class Account {
 		return "type = " + acctType + ", balance = " + balance;
 	}
 
-	public void makeDeposit(double deposit) {
-		// implement
+	public void makeDeposit(double deposit) {	
+		balance += deposit;
 	}
 
 	public boolean makeWithdrawal(double amount) {
-		// implement
+		
+		if(amount <= balance) {
+			balance -= amount;
+			return true;
+		}
+		
 		return false;
 	}
 }
