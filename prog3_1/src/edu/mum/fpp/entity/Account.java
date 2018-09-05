@@ -2,8 +2,8 @@ package edu.mum.fpp.entity;
 
 class Account {
 	private final static double DEFAULT_BALANCE = 0.0;
-	private double balance;
-	private AccountType acctType;
+	public double balance;
+	public AccountType acctType;
 	private Employee employee;
 
 	Account(Employee emp, AccountType acctType, double balance) {
